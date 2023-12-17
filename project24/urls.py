@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('display_topics/',display_topics,name='display_topics'),
+    path('display_wp/',display_wp,name='display_wp'),
+    path('displayaccess/',displayaccess,name='displayaccess'),
+    path('insert_topic/',insert_topic,name='insert_topic'),
+    path('insert_webpage/',insert_webpage,name='insert_webpage'),
+    path('insert_access/',insert_access,name='insert_access'),
+
 ]

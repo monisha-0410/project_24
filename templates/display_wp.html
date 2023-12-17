@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Display webpage
+    </h1>
+    <table border="3px">
+        <tr>
+            <th>primary_key</th>
+            <th>webpageName</th>
+            <th>TopicNames</th>
+            <th>URL</th>
+            <th>EMAil</th>
+        </tr>
+    {% for wo in QLWO %}
+    <tr>
+         <td>{{ wo.pk }}</td>
+        <td>{{ wo.name }}</td>
+        <td>{{ wo.Topic_name }}</td>
+        <td>{{ wo.url }}</td>
+        <td>{{ wo.Email }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

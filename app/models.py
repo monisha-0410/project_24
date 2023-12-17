@@ -11,6 +11,7 @@ class WebPage(models.Model):
     name=models.CharField(max_length=100,primary_key=True)
     Topic_name=models.ForeignKey(Topic,on_delete=models.CASCADE)
     url=models.URLField()
+    Email=models.CharField(max_length=100,default='india@gmail.com')
 
     def __str__(self):
         return self.name
